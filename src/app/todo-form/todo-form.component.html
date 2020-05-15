@@ -1,26 +1,26 @@
 <h2>NEW TODO</h2>
-<form>
+<form [formGroup]="todoForm" (ngSubmit)="addNewToDo()">
     <section>
         <div class="row">
             <label for="name" class="col-25">
                 <span>YOUR NAME: </span>
             </label>
-            <input type="text" id="name" name="username" class="col-75" autocomplete="off">
+            <input type="text" id="name" name="username" class="col-75" autocomplete="off" formControlName="name">
         </div>
         <div class="row">
             <label for="task" class="col-25">
                 <span>TASK: </span>
             </label>
-            <input type="text" id="task" name="task" class="col-75" autocomplete="off">
+            <input type="text" id="task" name="task" class="col-75" autocomplete="off" formControlName="task">
         </div>
         <div class="row">
             <label for="priority" class="col-25">
                 <span>PRIORITY: </span>
             </label>
-            <select id="priority" name="priority" class="col-75">
-                <option value="high">HIGH</option>
-                <option value="medium">MEDIUM</option>
-                <option value="low">LOW</option>
+            <select id="priority" name="priority" class="col-75" formControlName="priority">
+                <option value="High">HIGH</option>
+                <option value="Medium">MEDIUM</option>
+                <option value="Low">LOW</option>
             </select>
         </div>
         <div class="submit-row">

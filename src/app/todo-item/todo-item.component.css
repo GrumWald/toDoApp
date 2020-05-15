@@ -1,0 +1,58 @@
+.item-row {
+    width: 100%;
+    height:3rem;
+    border: 2px solid #43B0F1;
+    border-radius: 4px;
+    background-color: #1E3D58;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    line-height: 2rem;
+    display: grid;
+    grid-template-columns: 30% 50% 10% 10%;
+}
+
+.col-name {
+    box-sizing: border-box;
+    padding-right: 2rem;
+    grid-column: 1/2;
+    padding-left: 1rem;
+    align-self: center;
+}
+
+.col-task {
+    grid-column: 2/3;
+    padding-right: 2rem;
+    box-sizing: border-box;
+    align-self: center;
+}
+.col-prio {
+    grid-column: 3/4;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.col-action {
+    grid-column: 4/5;
+    box-sizing: border-box;
+    align-self: center;
+    display: flex;
+}
+
+.del-button {
+    display: block;
+    padding: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.725rem;
+    background-color: rgb(192, 44, 63);
+}
+
+.confirm-button {
+    display: block;
+    padding: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.4rem;
+    background-color: rgb(78, 206, 78);
+}
+

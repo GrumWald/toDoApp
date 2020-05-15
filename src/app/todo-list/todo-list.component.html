@@ -1,1 +1,3 @@
-<p>todo-list works!</p>
+<div *ngFor="let todoTask of todos$ | async">
+    <app-todo-item [todoItem]=todoTask></app-todo-item>
+</div>
