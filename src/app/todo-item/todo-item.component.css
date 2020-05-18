@@ -11,6 +11,11 @@
     grid-template-columns: 30% 50% 10% 10%;
 }
 
+.item-row:hover {
+    background-color: darkgoldenrod;
+    transition: 0.3s;
+}
+
 .col-name {
     box-sizing: border-box;
     padding-right: 2rem;
@@ -45,6 +50,9 @@
     width: 1.5rem;
     margin-left: 0.725rem;
     background-color: rgb(192, 44, 63);
+    outline: none;
+    border: 1px solid black;
+    font-weight: 800;
 }
 
 .confirm-button {
@@ -54,5 +62,7 @@
     width: 1.5rem;
     margin-left: 0.4rem;
     background-color: rgb(78, 206, 78);
+    border: 1px solid black;
+    font-weight: 800;
 }
 

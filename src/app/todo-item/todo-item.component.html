@@ -3,7 +3,7 @@
     <span class="col-task">{{todoItem.task}}</span>
     <span class="col-prio">{{todoItem.priority}}</span>
     <span class="col-action">
-        <button class="del-button">X</button>
+        <button class="del-button" (click)="deleteTodo(todoItem.id)">X</button>
         <button class="confirm-button">V</button>
     </span>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoStoreService } from '../services/todo-store.service';
 
+
 @Component({
     selector: 'app-todo-list',
     templateUrl: './todo-list.component.html',
@@ -16,5 +17,4 @@ export class TodoListComponent implements OnInit {
 
     ngOnInit(): void {
     }
-
 }

@@ -23,5 +23,8 @@ export class ApiService {
         return this.http.get<TodoTask[]>(this.apiUrl);
     }
 
+    removeTodo(id: number): Observable<any> {
+        return this.http.delete<any>(this.apiUrl + '/' + id);
+    }
 }
 
