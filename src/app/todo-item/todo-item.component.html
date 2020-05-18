@@ -1,9 +1,9 @@
-<div class="item-row">
+<div class="item-row" [ngClass]="{finished: todoItem.finished}">
     <div class="col-name">{{todoItem.name}}</div>
     <span class="col-task">{{todoItem.task}}</span>
     <span class="col-prio">{{todoItem.priority}}</span>
     <span class="col-action">
         <button class="del-button" (click)="deleteTodo(todoItem.id)">X</button>
-        <button class="confirm-button">V</button>
+        <button class="confirm-button" (click)="setTodoFinished(todoItem.id)">V</button>
     </span>
 </div>

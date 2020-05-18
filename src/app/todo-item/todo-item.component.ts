@@ -23,10 +23,17 @@ export class TodoItemComponent implements OnInit {
     deleteTodo(todoId: number): void {
         this.api.removeTodo(todoId).subscribe(
             resp => {
-                console.log(resp);
                 this.store.removeTodo(todoId);
             }
         );
+    }
+
+    setTodoFinished(todoId: number): void {
+        this.api.setTodoFinished(todoId).subscribe(
+            resp => {
+                this.store.setCompleted(todoId, true);
+            }
+        )
     }
 
 

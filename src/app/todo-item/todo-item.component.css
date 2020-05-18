@@ -11,11 +11,6 @@
     grid-template-columns: 30% 50% 10% 10%;
 }
 
-.item-row:hover {
-    background-color: darkgoldenrod;
-    transition: 0.3s;
-}
-
 .col-name {
     box-sizing: border-box;
     padding-right: 2rem;
@@ -64,5 +59,10 @@
     background-color: rgb(78, 206, 78);
     border: 1px solid black;
     font-weight: 800;
+}
+
+.finished {
+    background-color: rgb(77, 117, 17);
+    transition: linear 0.5s;
 }
 

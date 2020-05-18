@@ -14,14 +14,17 @@ export class TodoStoreService {
 
     readonly todos$ = this._todos.asObservable();
 
+    /* Return all todos from local store */
     get todos(): TodoTask[] {
         return this._todos.getValue();
     }
 
+    /* Sets all todos in local store */
     set todos(val: TodoTask[]) {
         this._todos.next(val);
     }
 
+    /* Add new todo to array of todos in local store */
     addTodo(newTodo: TodoTask) {
         this.todos = [
             ...this.todos,
@@ -29,7 +32,22 @@ export class TodoStoreService {
         ];
     }
 
+    /* Remove todo from array of todos in local store */
     removeTodo(id: number) {
         this.todos = this.todos.filter(todo => todo.id !== id);
+    }
+
+    /* Mark todo with current id as finished */
+    setCompleted(id: number, finished: boolean) {
+        let todo = this.todos.find(todo => todo.id === id);
+
+        if (todo) {
+            const index = this.todos.indexOf(todo);
+            this.todos[index] = {
+                ...todo,
+                finished
+            }
+            this.todos = [...this.todos];
+        }
     }
 }

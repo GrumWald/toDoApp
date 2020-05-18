@@ -1,46 +1,10 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "name": "Jiri Kaspar",
-      "task": "feed cat ",
-      "priority": "High"
-    },
-    {
-      "id": 2,
-      "name": "Vojtech Kaspar",
-      "task": "learn maths ",
-      "priority": "High"
-    },
-    {
-      "name": "Marmolada obecna",
-      "task": "do some stuff",
-      "priority": "low",
-      "id": 3
-    },
-    {
-      "name": "Petr Veliky",
-      "task": "do some more stuff",
-      "priority": "medium",
-      "id": 4
-    },
-    {
-      "name": "Jiri Kaspar",
-      "task": "Who knows",
-      "priority": "medium",
-      "id": 5
-    },
-    {
-      "name": "Marie",
-      "task": "Lalalala",
-      "priority": "low",
-      "id": 6
-    },
-    {
-      "name": "Jaja",
-      "task": "I would like to know",
-      "priority": "medium",
-      "id": 7
+      "name": "God",
+      "task": "Save the world",
+      "priority": "Medium",
+      "id": 1
     }
   ]
 }

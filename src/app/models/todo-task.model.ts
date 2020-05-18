@@ -3,4 +3,5 @@ export class TodoTask {
     name: string;
     task: string;
     priority: string;
+    finished: boolean;
 }
