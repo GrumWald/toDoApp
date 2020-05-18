@@ -1,3 +1,8 @@
+<div class="button-row">
+    <button class="filter-button" (click)="showAllTodos()">ALL</button>
+    <button class="filter-button" (click)="showFinishedTodos()">FINISHED</button>
+    <button class="filter-button" (click)="showUnfinishedTodos()">UNFINISHED</button>
+</div>
 <div *ngFor="let todoTask of todos$ | async">
     <app-todo-item [todoItem]=todoTask></app-todo-item>
 </div>

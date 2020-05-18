@@ -30,7 +30,12 @@ export class TodoFormComponent implements OnInit {
         this.api.addNewTodo(newTodo).subscribe(
             resp => {
                 this.store.addTodo(resp);
+                this.clearForm();
             }
         );
+    }
+
+    clearForm(): void {
+        this.todoForm.reset();
     }
 }

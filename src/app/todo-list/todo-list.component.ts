@@ -17,4 +17,19 @@ export class TodoListComponent implements OnInit {
 
     ngOnInit(): void {
     }
+
+    /*Filter todos - show all available todos */
+    showAllTodos(): void {
+        this.todos$ = this.store.todos$;
+    }
+
+    /*Filter todos - show all finished todos */
+    showFinishedTodos(): void {
+        this.todos$ = this.store.finishedTodos$;
+    }
+
+    /*Filter todos - show all unfinished todos */
+    showUnfinishedTodos(): void {
+        this.todos$ = this.store.unfinishedTodos$;
+    }
 }

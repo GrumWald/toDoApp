@@ -9,6 +9,7 @@
     box-sizing: border-box;
     letter-spacing: 0.1rem;
     overflow-y: auto;
+    border: 3px solid white;
 }
 
 :host::-webkit-scrollbar {
@@ -23,4 +24,18 @@
 :host::-webkit-scrollbar-thumb {
   background-color: rgb(18, 22, 44);
   outline: 1px solid white;
+}
+
+.button-row {
+    height:80px;
+}
+
+.filter-button {
+    height: 40px;
+    width: 100px;
+    margin-right: 1rem;
+    background-color: #1E3D58;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
 }

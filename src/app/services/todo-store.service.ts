@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { TodoTask } from '../models/todo-task.model';
+import { map } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -13,6 +14,12 @@ export class TodoStoreService {
     private readonly _todos = new BehaviorSubject<TodoTask[]>([]);
 
     readonly todos$ = this._todos.asObservable();
+    readonly finishedTodos$ = this.todos$.pipe(
+        map(todos => todos.filter(todo => todo.finished))
+    );
+    readonly unfinishedTodos$ = this.todos$.pipe(
+        map(todos => todos.filter(todo => !todo.finished))
+    );
 
     /* Return all todos from local store */
     get todos(): TodoTask[] {

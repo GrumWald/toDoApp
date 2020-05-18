@@ -4,6 +4,8 @@
     <span class="col-prio">{{todoItem.priority}}</span>
     <span class="col-action">
         <button class="del-button" (click)="deleteTodo(todoItem.id)">X</button>
-        <button class="confirm-button" (click)="setTodoFinished(todoItem.id)">V</button>
+        <button class="confirm-button" (click)="setTodoFinished(todoItem.id)" *ngIf="!todoItem.finished">
+            V
+        </button>
     </span>
 </div>

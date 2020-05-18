@@ -4,7 +4,28 @@
       "name": "God",
       "task": "Save the world",
       "priority": "Medium",
-      "id": 1
+      "id": 1,
+      "finished": true
+    },
+    {
+      "name": "Person 1",
+      "task": "Do the housework",
+      "priority": "High",
+      "id": 2
+    },
+    {
+      "name": "Person 2",
+      "task": "Task 2",
+      "priority": "Low",
+      "id": 3,
+      "finished": true
+    },
+    {
+      "name": "Person 3",
+      "task": "Task 3",
+      "priority": "Medium",
+      "id": 4,
+      "finished": true
     }
   ]
 }
