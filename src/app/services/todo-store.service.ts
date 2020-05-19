@@ -13,10 +13,15 @@ export class TodoStoreService {
 
     private readonly _todos = new BehaviorSubject<TodoTask[]>([]);
 
+    // Observable with all todos stream
     readonly todos$ = this._todos.asObservable();
+
+    // Observable with only finished todos stream
     readonly finishedTodos$ = this.todos$.pipe(
         map(todos => todos.filter(todo => todo.finished))
     );
+
+    // Observable with only unfinished todos stream
     readonly unfinishedTodos$ = this.todos$.pipe(
         map(todos => todos.filter(todo => !todo.finished))
     );

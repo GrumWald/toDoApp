@@ -1,7 +1,10 @@
 <div class="button-row">
-    <button class="filter-button" (click)="showAllTodos()">ALL</button>
-    <button class="filter-button" (click)="showFinishedTodos()">FINISHED</button>
-    <button class="filter-button" (click)="showUnfinishedTodos()">UNFINISHED</button>
+    <button class="filter-button" (click)="showAllTodos()"
+        [ngClass]="{activeFilter: activeFilterButton == 'all'}">ALL</button>
+    <button class="filter-button" (click)="showFinishedTodos()"
+        [ngClass]="{activeFilter: activeFilterButton == 'finished'}">FINISHED</button>
+    <button class="filter-button" (click)="showUnfinishedTodos()"
+        [ngClass]="{activeFilter: activeFilterButton == 'unfinished'}">UNFINISHED</button>
 </div>
 <div *ngFor="let todoTask of todos$ | async">
     <app-todo-item [todoItem]=todoTask></app-todo-item>

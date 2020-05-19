@@ -1,17 +1,11 @@
 {
   "tasks": [
     {
-      "name": "God",
-      "task": "Save the world",
-      "priority": "Medium",
-      "id": 1,
-      "finished": true
-    },
-    {
       "name": "Person 1",
       "task": "Do the housework",
       "priority": "High",
-      "id": 2
+      "id": 2,
+      "finished": true
     },
     {
       "name": "Person 2",
@@ -26,6 +20,12 @@
       "priority": "Medium",
       "id": 4,
       "finished": true
+    },
+    {
+      "name": "Person 4",
+      "task": "Task 4",
+      "priority": "Low",
+      "id": 5
     }
   ]
 }

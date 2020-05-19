@@ -10,6 +10,7 @@ import { TodoStoreService } from '../services/todo-store.service';
 export class TodoListComponent implements OnInit {
 
     todos$ = this.store.todos$;
+    activeFilterButton = 'all';
 
     constructor(
         private store: TodoStoreService
@@ -21,15 +22,18 @@ export class TodoListComponent implements OnInit {
     /*Filter todos - show all available todos */
     showAllTodos(): void {
         this.todos$ = this.store.todos$;
+        this.activeFilterButton = 'all';
     }
 
     /*Filter todos - show all finished todos */
     showFinishedTodos(): void {
         this.todos$ = this.store.finishedTodos$;
+        this.activeFilterButton = 'finished';
     }
 
     /*Filter todos - show all unfinished todos */
     showUnfinishedTodos(): void {
         this.todos$ = this.store.unfinishedTodos$;
+        this.activeFilterButton = 'unfinished';
     }
 }
